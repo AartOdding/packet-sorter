@@ -2,7 +2,7 @@
 Solution to a Reddit/r/DailyProgrammer challenge about the sorting of incoming packets, implemented in C++.
 
 
-#Description
+# Description
 
 When a message is transmitted over the internet, it is split into multiple packets, each packet is transferred individually, and the packets are reassembled into the original message by the receiver. Because the internet exists in the real world, and because the real world can be messy, packets do not always arrive in the order in which they are sent. For today's challenge, your program must collect packets from stdin, assemble them in the correct order, and print the completed messages to stdout.
 The point of reading from stdin is to simulate incoming packets. For the purposes of this challenge, assume there is a potentially unlimited number of packets. Your program should not depend on knowing how many packets there are in total. Simply sorting the input in its entirety would technically work, but defeats the purpose of this exercise.
@@ -10,7 +10,8 @@ The point of reading from stdin is to simulate incoming packets. For the purpose
 
 Each line of input represents a single packet. Each line will be formatted as X Y Z some_text, where X Y and Z are positive integer and some_text is an arbitrary string. X represents the message ID (ie which message this packet is a part of). Y represents the packet ID (ie the index of this packet in the message) (packets are zero-indexed, so the first packet in a message will have Y=0, the last packet in a message will have Y=Z-1). Z represents the total number of packets in the message.
 It is guaranteed that there will be no duplicate packets or message IDs.
-#Example input
+
+# Example input
 
 6220    1   10  Because he's the hero Gotham deserves, 
 6220    9   10   
@@ -29,10 +30,12 @@ It is guaranteed that there will be no duplicate packets or message IDs.
 6220    4   10  Because he can take it. 
 6220    2   10  but not the one it needs right now. 
 6220    8   10  A Dark Knight. 
-#Output description
+
+# Output description
 
 Output each completed message, one line per packet. Messages should be outputted in the order in which they are completed.
-#Example output
+
+# Example output
 
 5181    0   7   I've seen things you people wouldn't 
 5181    1   7   believe. Attack ships on fire off the 
@@ -51,7 +54,8 @@ Output each completed message, one line per packet. Messages should be outputted
 6220    7   10  A watchful protector. 
 6220    8   10  A Dark Knight. 
 6220    9   10   
-#Challenge input
+
+# Challenge input
 
 7469    1   7   believe. Attack ships on fire off the 
 9949    6   10  He's a silent guardian. 
